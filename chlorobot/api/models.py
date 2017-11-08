@@ -17,8 +17,8 @@ class Sensor(models.Model) :
 
 
 class State(models.Model) :
-    sensor = models.ForeignKey(sensor)
-    value = models.CharField(max_longth=255, blank=False, null=False)
-    created_time = models.DateTimefield(auto_now_add=True)
+    sensor = models.ForeignKey(Sensor)
+    value = models.CharField(max_length=255, blank=False, null=False)
+    created_time = models.DateTimeField(auto_now_add=True)
 
 
