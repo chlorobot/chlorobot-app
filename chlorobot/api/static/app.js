@@ -10,7 +10,7 @@ app.controller('AppCtrl', function($scope, $resource, API) {
 
 	API.query({"endpoint":"logs", 'ordering' : 'create_datetime'}).$promise.then(
 		function(data) {
-			$scope.instances = data;
+			$scope.logs = data;
 		},
 		function(error) {
 			console.log(error);

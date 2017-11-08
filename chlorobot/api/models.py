@@ -11,3 +11,10 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
         Token.objects.create(user=instance)
 
 
+class Sensor(models.Model) :
+    name = models.CharField(max_length=255, blank=False, null=False, unique=True)
+    gpio = models.IntegerField(blank=False, null=False)
+
+class State(models.Model) :
+    sensor = models.ForeignKey(sensor)
+
