@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from polls.models import Question as Poll
+from sensors import helper
 
 class Command(BaseCommand):
 

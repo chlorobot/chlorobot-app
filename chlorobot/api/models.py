@@ -15,6 +15,10 @@ class Sensor(models.Model) :
     name = models.CharField(max_length=255, blank=False, null=False, unique=True)
     gpio = models.IntegerField(blank=False, null=False)
 
+
 class State(models.Model) :
     sensor = models.ForeignKey(sensor)
+    value = models.CharField(max_longth=255, blank=False, null=False)
+    created_time = models.DateTimefield(auto_now_add=True(
+
 
